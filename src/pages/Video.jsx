@@ -1,5 +1,5 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React from "react";
+import { useParams } from "react-router-dom";
 
 function Video() {
   const { id } = useParams();
@@ -7,11 +7,13 @@ function Video() {
   return (
     <div className="flex flex-col mt-4 px-4 items-center">
       <iframe
-        className="w-full h-96"
+        width="560"
+        height="315"
         src={`https://www.youtube.com/embed/${id}`}
-        title="Video Player"
+        title="YouTube video player"
+        frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
+        allowfullscreen
       ></iframe>
       <h2 className="mt-4 text-2xl font-bold">Video Title Here</h2>
     </div>
